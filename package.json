@@ -1,0 +1,23 @@
+{
+  "name": "angular-js-examples",
+  "version": "1.0.0",
+  "description": "**Serve with**\r ./src/python -m SimpleHTTPServer 5000",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -a localhost -p 8000 -c-1 ./src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abaranasia/angular-js-examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abaranasia/angular-js-examples/issues"
+  },
+  "homepage": "https://github.com/Abaranasia/angular-js-examples#readme",
+  "dependencies": {
+       "http-server": "^14.1.0"
+  }
+}

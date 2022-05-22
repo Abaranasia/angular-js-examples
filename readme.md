@@ -1,3 +1,11 @@
+## New version
+Created a package.json and installed the node http-server as dependecy to serve with routes.
+
+**Serve with**
+npm run
+
+## Old version
+
 **Serve with**
 ./src/python -m SimpleHTTPServer 5000
 
