@@ -7,6 +7,18 @@ angular.module('blogList')
   templateUrl: '/templates/blog-list.html',
   controller: function($scope) { // Functionality of the component
     console.log(`I'm a controller`);
+
+    let blogItems = [
+      { title: 'Entry title #1', id: 1, desc: 'First entry' },
+      { title: 'Entry title #2', id: 2, desc: 'Second entry' },
+      { title: 'Entry title #3', id: 3, desc: 'Third entry' },
+      { title: 'Entry title #4', id: 4, desc: 'Fourth entry' },
+    ];
+    console.log(blogItems);
+    $scope.items= blogItems; 
+    // To have a variable available in the component, 
+    // We need to expose it on the $scope
+    
     $scope.message="Blog-list is running...";
     $scope.clicks=0;
     $scope.buttonHandle = function() {

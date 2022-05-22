@@ -1,4 +1,12 @@
 <div id="blog-list" class="">
-  <h3>{{ message }}</h3>
+  <h2>{{ message }}</h2>
   <button ng-click="buttonHandle()">Click me</button>
+  <h4>Blog entries:</h4>
+  <ul>
+    <li ng-repeat="item in items">
+      <a ng-href="/blog/{{ item.id }}">{{ item.title }} - {{ item.desc }}</a>
+    </li>
+  </ul>
+  <p ng-if="items.length == 0"> No items to show. Coming soon </p>
 </div>
+
