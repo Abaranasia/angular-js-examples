@@ -12,7 +12,7 @@ angular.module('blogList')
       { title: 'Entry title #1', id: 1, desc: 'First page' },
       { title: 'Entry title #2', id: 2, desc: 'Second entry' },
       { title: 'Entry title #3', id: 3, desc: 'Third entry' },
-      { title: 'Entry title #4', id: 4, desc: 'Fourth entry' },
+      { title: 'Entry title #4', id: 4, desc: 'About' },
     ];
     console.log(blogItems);
     $scope.items= blogItems; 
