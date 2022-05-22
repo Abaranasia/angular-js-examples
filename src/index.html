@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="try">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <script src="./js/angular.min.js"></script>
+  <script src="./js/app/app.module.js"></script>
+  <script src="./js/app/app.config.js"></script>
+
+
+  <script src="./js/app/blog-list/blog-list.module.js"></script>
+  <script src="./js/app/blog-list/blog-list.component.js"></script>
+  <title>Document</title>
+  <style>
+    .red {color: red}
+    .green {color: green}
+  </style>
+</head>
+<body>
+  <h1 class="red" ng-class="{green:name}">AJS says: hello
+     <span ng-if="name">{{name}}</span>
+     <span ng-if="!name">world</span>
+  </h1>
+  <input type="text" ng-model="name" />
+
+<!--   <div class="" ng-controller="BlogListController">
+    <h2>{{ message }}</h2>
+    <button ng-click="buttonHandle()">Click me</button>
+  </div> -->
+
+<blog-list></blog-list>
+
+</body>
+</html>
