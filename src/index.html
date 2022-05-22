@@ -1,41 +1,48 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="try">
 <head>
+  <base href="/">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Try AngularJS</title>
+  <!-- <script src="./js/angular.min.js"></script> -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-resource.js"></script> 
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script> 
+
+  <script src="/js/app/app.module.js"></script>
+  <script src="/js/app/app.config.js"></script>
+
+  <script src="/js/app/first-page/first-page.module.js"></script>
+  <script src="/js/app/first-page/first-page.component.js"></script>
   
-  <script src="./js/angular.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script> 
-
-  <script src="path/to/angular.js"></script>
-  <script src="path/to/angular-route.js"></script>
-
-  <script src="./js/app/app.module.js"></script>
-  <script src="./js/app/app.config.js"></script>
-
-
-  <script src="./js/app/blog-list/blog-list.module.js"></script>
-  <script src="./js/app/blog-list/blog-list.component.js"></script>
-  <title>Document</title>
+  <script src="/js/app/blog-list/blog-list.module.js"></script>
+  <script src="/js/app/blog-list/blog-list.component.js"></script>
   <style>
     .red {color: red}
     .green {color: green}
   </style>
 </head>
 <body>
-  <h1 class="red" ng-class="{green:name}">AJS says: hello
+  <h1>Angular App</h1>
+  <!-- <h1 class="red" ng-class="{green:name}">AJS says: hello
      <span ng-if="name">{{name}}</span>
      <span ng-if="!name">world</span>
   </h1>
-  <input type="text" ng-model="name" />
+  <input type="text" ng-model="name" /> -->
 
 <!--   <div class="" ng-controller="BlogListController">
     <h2>{{ message }}</h2>
     <button ng-click="buttonHandle()">Click me</button>
   </div> -->
+<!-- <first-page></first-page> -->
+<!-- <blog-list></blog-list> -->
+<div ng-view>
 
-<blog-list></blog-list>
+
+</div>
+
 
 </body>
 </html>

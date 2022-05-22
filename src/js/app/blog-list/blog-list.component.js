@@ -6,10 +6,10 @@ angular.module('blogList')
   //template: '<div class=""><h2>{{ message }}</h2><button ng-click="buttonHandle()">Click me</button></div>', // Template with the component view
   templateUrl: '/templates/blog-list.html',
   controller: function($scope) { // Functionality of the component
-    console.log(`I'm a controller`);
+    console.log(`I'm Blog List controller`);
 
     let blogItems = [
-      { title: 'Entry title #1', id: 1, desc: 'First entry' },
+      { title: 'Entry title #1', id: 1, desc: 'First page' },
       { title: 'Entry title #2', id: 2, desc: 'Second entry' },
       { title: 'Entry title #3', id: 3, desc: 'Third entry' },
       { title: 'Entry title #4', id: 4, desc: 'Fourth entry' },
