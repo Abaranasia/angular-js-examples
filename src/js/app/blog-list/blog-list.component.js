@@ -13,10 +13,10 @@ angular.module('blogList')
     console.log(`I'm Blog List controller`);
 
     let blogItems = [
-      { title: 'Entry title #1', id: 1, desc: 'First page' },
-      { title: 'Entry title #2', id: 2, desc: 'Second entry' },
-      { title: 'Entry title #3', id: 3, desc: 'Third entry' },
-      { title: 'Entry title #4', id: 4, desc: 'About' },
+      { title: 'Entry #1', id: 1, desc: 'Benefits of tea' },
+      { title: 'Entry #2', id: 2, desc: 'Tasty veggie meals' },
+      { title: 'Entry #3', id: 3, desc: 'React vs Angular vs Vuejs' },
+      { title: 'Entry #4', id: 4, desc: 'Learn Node AND Python' },
     ];
     console.log(blogItems);
     $scope.items= blogItems; 
@@ -33,15 +33,3 @@ angular.module('blogList')
   }
 })
 
-// Comented for reference
-
-  // .controller  ('BlogListController', function($scope) {
-  //   console.log(`I'm a controller`);
-  //   $scope.message="Blog-list is running...";
-  //   $scope.clicks=0;
-  //   $scope.buttonHandle = function() {
-  //     console.log("clicked!");
-  //     $scope.clicks+=1;
-  //     $scope.message="You clicked "+ $scope.clicks + " times";
-  //   }
-  // })
