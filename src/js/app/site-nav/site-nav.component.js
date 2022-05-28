@@ -12,10 +12,10 @@ angular.module('siteNav')
       console.log(`I'm the App main index`);
 
       let appPages = [
-        { title: 'Page #1', id: 1, desc: 'Using directives' },
-        { title: 'Page #2', id: 2, desc: 'Simple counter' },
-        { title: 'Page #3', id: 3, desc: 'Blog List' },
-        { title: 'Page #4', id: 4, desc: 'About page' },
+        { title: 'first', id: 1, desc: 'Using directives' },
+        { title: 'counter', id: 2, desc: 'Simple counter' },
+        { title: 'blog', id: 3, desc: 'Blog List' },
+        { title: 'about', id: 4, desc: 'About page' },
       ];
       console.log(appPages);
       $scope.items = appPages;
