@@ -24,12 +24,7 @@ angular.module('blogList')
     // We need to expose it on the $scope
     
     $scope.message="Blog-list is running...";
-    $scope.clicks=0;
-    $scope.buttonHandle = function() {
-      console.log("clicked!");
-      $scope.clicks+=1;
-      $scope.message="You clicked "+ $scope.clicks + " times";
-    };
+
   }
 })
 
