@@ -7,6 +7,7 @@ angular.module('try', [
   'ngRoute',
 
   // Internal components
+  'siteNav',
   'firstPage',
   'blogList'
 
