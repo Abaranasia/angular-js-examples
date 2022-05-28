@@ -13,10 +13,10 @@ angular.module('blogList')
     console.log(`I'm Blog List controller`);
 
     let blogItems = [
-      { title: 'Entry #1', id: 1, desc: 'Benefits of tea' },
-      { title: 'Entry #2', id: 2, desc: 'Tasty veggie meals' },
-      { title: 'Entry #3', id: 3, desc: 'React vs Angular vs Vuejs' },
-      { title: 'Entry #4', id: 4, desc: 'Learn Node AND Python' },
+      { title: 'Entry-1', id: 1, desc: 'Benefits of tea' },
+      { title: 'Entry-2', id: 2, desc: 'Tasty veggie meals' },
+      { title: 'Entry-3', id: 3, desc: 'React vs Angular vs Vuejs' },
+      { title: 'Entry-4', id: 4, desc: 'Learn Node AND Python' },
     ];
     console.log(blogItems);
     $scope.items= blogItems; 

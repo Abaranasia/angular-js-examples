@@ -10,16 +10,19 @@ angular.module('try')
           .when("/", {
             template: "<site-nav></site-nav>"
           })
-          .when("/blog/1", {
+        .when("/first", {
             template: "<first-page></first-page>"
           })
-          .when("/blog/2", {
+        .when("/counter", {
             template: "<counter></counter>"
           })
-        .when("/blog/3", {
-          templateUrl: "<blog-list></blog-list>"
+        .when("/blog", {
+          template: "<blog-list></blog-list>"
         })
-        .when("/blog/4", {
+        .when("/entry/:id", {
+          template: "<blog-entry></blog-entry>"
+        })
+        .when("/about", {
           templateUrl: "/templates/about.html" // no component page
         })
           .otherwise({

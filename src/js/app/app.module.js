@@ -10,5 +10,6 @@ angular.module('try', [
   'siteNav',
   'firstPage',
   'counter',
-  'blogList'
+  'blogList',
+  'blogEntry'
 ]);
