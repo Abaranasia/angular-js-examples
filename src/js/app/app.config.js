@@ -14,7 +14,7 @@ angular.module('try')
             template: "<first-page></first-page>"
           })
           .when("/blog/2", {
-            template: "<blog-list></blog-list>"
+            template: "<counter></counter>"
           })
         .when("/blog/3", {
           templateUrl: "<blog-list></blog-list>"

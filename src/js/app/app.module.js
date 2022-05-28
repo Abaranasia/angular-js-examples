@@ -9,6 +9,6 @@ angular.module('try', [
   // Internal components
   'siteNav',
   'firstPage',
+  'counter',
   'blogList'
-
 ]);
