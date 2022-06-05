@@ -9,20 +9,32 @@ angular.module('blogList')
   
   //template: '<div class=""><h2>{{ message }}</h2><button ng-click="buttonHandle()">Click me</button></div>', // Template with the component view
   templateUrl: '/templates/blog-list.html',
-  controller: function($scope) { // Functionality of the component
+    controller: function ($http, $scope) { // Functionality of the component
     console.log(`I'm Blog List controller`);
 
-    let blogItems = [
+      $scope.blogItems = [];
+
+      // Reading data from a local JSON repository
+      const successCallback = (response) => {
+        console.log(response);
+        $scope.blogItems = res.data
+      };
+
+      const failureCallback = (response) => {
+       console.log("Error: ", response.statusText)
+      }
+
+      $http.get("/json/blogPosts.json") // classic old-styled angular way
+        .then(successCallback, failureCallback)
+    /* let blogItems = [
       { title: 'Entry-1', id: 1, desc: 'Benefits of tea' },
       { title: 'Entry-2', id: 2, desc: 'Tasty veggie meals' },
       { title: 'Entry-3', id: 3, desc: 'React vs Angular vs Vuejs' },
       { title: 'Entry-4', id: 4, desc: 'Learn Node AND Python' },
-    ];
-    console.log(blogItems);
-    $scope.items= blogItems; 
+    ]; */
+     
     // To have a variable available in the component, 
-    // We need to expose it on the $scope
-    
+    // We need to expose it on the $scope    
     $scope.message="Blog-list is running...";
 
   }

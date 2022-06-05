@@ -4,12 +4,12 @@
 
   <h4>Blog entries:</h4>
   <ul>
-    <li ng-repeat="item in items">
+    <li ng-repeat="item in blogItems">
 <!--       <a ng-href="/entry/{{ item.id }}?t={{ item.desc }}">{{ item.title }} - {{ item.desc }}</a> -->
       <a ng-href="/entry/{{ item.id }}">{{ item.title }} - {{ item.desc }}</a>
     </li>
   </ul>
-  <p ng-if="items.length == 0"> No items to show. Coming soon </p>
+  <p ng-if="blogItems.length == 0"> No items to show. Coming soon </p>
   <p><a ng-href="/">Go back</a></p>
 </div>
 
