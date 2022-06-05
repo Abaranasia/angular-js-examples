@@ -14,24 +14,14 @@ angular.module('blogList')
 
       $scope.blogItems = [];
 
-      // Reading data from a local JSON repository
-      const successCallback = (response) => {
-        console.log(response);
-        $scope.blogItems = res.data
-      };
-
-      const failureCallback = (response) => {
-       console.log("Error: ", response.statusText)
-      }
-
-      $http.get("/json/blogPosts.json") // classic old-styled angular way
-        .then(successCallback, failureCallback)
-    /* let blogItems = [
-      { title: 'Entry-1', id: 1, desc: 'Benefits of tea' },
-      { title: 'Entry-2', id: 2, desc: 'Tasty veggie meals' },
-      { title: 'Entry-3', id: 3, desc: 'React vs Angular vs Vuejs' },
-      { title: 'Entry-4', id: 4, desc: 'Learn Node AND Python' },
-    ]; */
+      // Reading data from a local JSON repository refactored
+      $http.get("/json/blogPosts.json")
+        .then((response) => {
+          $scope.blogItems = response.data
+        })
+        .catch((error) => {
+          console.err("Error: ", error)
+        });
      
     // To have a variable available in the component, 
     // We need to expose it on the $scope    
