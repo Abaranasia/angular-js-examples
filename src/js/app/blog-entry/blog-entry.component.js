@@ -4,28 +4,33 @@ angular.module('blogEntry')
   .component('blogEntry', {
 
     templateUrl: '/templates/blog-entry.html',
-    controller: function ($http, $location, $routeParams, $scope) { // Functionality of the component
+    controller: function (Post, $http, $location, $routeParams, $scope) { // Functionality of the component
+      // Post references to our custom service Post that connects to the $resource
       console.log(`I'm Blog Entry view`);
-      console.log("$routeParams", $routeParams)
+      // console.log("$routeParams", $routeParams)
+
       $scope.entryId = '';
       $scope.title = "No entries available";
-      $scope.blogItems = [];
+      // $scope.blogItems = [];
 
+      //V4: reading data from Post service
+      Post.query(function (data) {
+        angular.forEach(data, (blog) => {
+          if (blog.id == parseInt($routeParams.id)) {
+            $scope.entryId = blog.id;
+            $scope.title = blog.desc
+          }
+        });
+      })
       // V3: reading from a served JSON file:
-      $http.get("/json/blogPosts.json") // modern promise handler
+/*       $http.get("/json/blogPosts.json") // modern promise handler
         .then(({ data }) => {
           $scope.blogItems = data;
 
-          angular.forEach($scope.blogItems, (blog) => {
-            if (blog.id == parseInt($routeParams.id)) {
-              $scope.entryId = blog.id;
-              $scope.title = blog.desc
-            }
-          });
         })
         .catch((error) => {
           console.err("Error: ", error)
-        });
+        }); */
 
     }
   })

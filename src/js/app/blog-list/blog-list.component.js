@@ -9,19 +9,21 @@ angular.module('blogList')
   
   //template: '<div class=""><h2>{{ message }}</h2><button ng-click="buttonHandle()">Click me</button></div>', // Template with the component view
   templateUrl: '/templates/blog-list.html',
-    controller: function ($http, $scope) { // Functionality of the component
+    controller: function (Post, $http, $scope) { // Functionality of the component
     console.log(`I'm Blog List controller`);
 
       $scope.blogItems = [];
 
-      // Reading data from a local JSON repository refactored
-      $http.get("/json/blogPosts.json")
+      // v2 - Reading data from our custom resource using $resource 
+      $scope.blogItems = Post.query();
+
+/*       $http.get("/json/blogPosts.json")
         .then((response) => {
           $scope.blogItems = response.data
         })
         .catch((error) => {
           console.err("Error: ", error)
-        });
+        }); */
      
     // To have a variable available in the component, 
     // We need to expose it on the $scope    
