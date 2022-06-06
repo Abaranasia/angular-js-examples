@@ -11,5 +11,6 @@ angular.module('try', [
   'firstPage',
   'counter',
   'blogList',
-  'blogEntry'
+  'blogEntry',
+  'confirmClick',
 ]);
