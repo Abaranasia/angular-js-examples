@@ -12,12 +12,14 @@ angular.module('blogList')
       $scope.message = "Blog-list is running...";
       $scope.blogItems = Post.query();
 
+      // This pattern is more robust because we define the functionality inside the component
       $scope.goToItem = (post) => { // This is a function executed when a link is clicked
         console.log(`Item link clicked!`, post);
-        $location.path('/entry/' + post.id)
-      }
 
-
+        $rootScope.$apply(function () {
+          $location.path('/entry/' + post.id)
+        })
+      };
   }
 })
 

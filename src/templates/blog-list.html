@@ -5,16 +5,16 @@
   <h4>Blog entries:</h4>
   <ul>
     <li ng-repeat="item in blogItems">
-      <a ng-href="#" ng-click="goToItem( item )">
-        {{ item.title }} - {{ item.desc }}
-      </a>
-<!--       <a 
-        ng-href="/entry/{{ item.id }}" 
-        confirm-click="Are you ready?"
-        confirmed-click="/entry/{{ item.id }}"
-        >
+      <!-- <a ng-href="#" ng-click="goToItem( item )">
         {{ item.title }} - {{ item.desc }}
       </a> -->
+       <a 
+        ng-href="#" 
+        confirm-click="Are you ready?"
+        confirmed-click="goToItem( item )"
+        >
+        {{ item.title }} - {{ item.desc }}
+      </a> 
     </li>
   </ul>
   <p ng-if="blogItems.length == 0"> No items to show. Coming soon </p>
