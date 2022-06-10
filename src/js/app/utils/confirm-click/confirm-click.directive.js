@@ -9,7 +9,13 @@ angular.module('confirmClick').
         post: "=post",
       },
       restrict: "E", // Only displays the element part of the directive
-      template: "<a href=''>( {{ post.id }} )</a>", // It shows the title of the post, so no need to write text 
+      template: "<a href=''>( {{ post.id }} )</a>", // It shows the title of the post, so no need to write text
+      /*
+      template: <a ng-href="/entry/{{ post.id }}">{{ post.title }} </a>",
+      This will display the entire link fron a template instead of writing it in the component,
+      so it will act as a component itself ready to be inserted everywhere
+      
+       */
       link: function (scope, element, attr) {
         console.log(scope.message); // It contains an attribute of the directive
         console.log(element); // Element which the directive is binded; here is an a tag
