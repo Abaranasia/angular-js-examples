@@ -5,15 +5,12 @@
   <h4>Blog entries:</h4>
   <ul>
     <li ng-repeat="item in blogItems">
-<!--       <a ng-href="/entry/{{ item.id }}?t={{ item.desc }}">{{ item.title }} - {{ item.desc }}</a> -->
-      <a ng-href="/entry/{{ item.id }}">{{ item.title }} - {{ item.desc }}</a>
+<!--       <a ng-href="/entry/{{ item.id }}">{{ item.title }} - {{ item.desc }}</a> -->
       <confirm-click 
         id={{item.id}} 
-        message="directive" 
         eq="1000+item.id"
         post="item" 
         >
-        X
       </confirm-click>
     </li>
   </ul>
