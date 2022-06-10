@@ -6,28 +6,17 @@
 
 angular.module('blogList')
   .component('blogList', { 
-  
-  //template: '<div class=""><h2>{{ message }}</h2><button ng-click="buttonHandle()">Click me</button></div>', // Template with the component view
-  templateUrl: '/templates/blog-list.html',
-    controller: function (Post, $http, $scope) { // Functionality of the component
-    console.log(`I'm Blog List controller`);
 
-      $scope.blogItems = [];
-
-      // v2 - Reading data from our custom resource using $resource 
+    templateUrl: '/templates/blog-list.html',
+    controller: function (Post, $scope, $rootScope, $location) { // Functionality of the component
+      $scope.message = "Blog-list is running...";
       $scope.blogItems = Post.query();
 
-/*       $http.get("/json/blogPosts.json")
-        .then((response) => {
-          $scope.blogItems = response.data
-        })
-        .catch((error) => {
-          console.err("Error: ", error)
-        }); */
-     
-    // To have a variable available in the component, 
-    // We need to expose it on the $scope    
-    $scope.message="Blog-list is running...";
+      $scope.goToItem = (post) => { // This is a function executed when a link is clicked
+        console.log(`Item link clicked!`, post);
+        $location.path('/entry/' + post.id)
+      }
+
 
   }
 })
